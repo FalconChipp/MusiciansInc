@@ -23,7 +23,7 @@ const Hero = () => {
       {/* Centered text */}
       <div className="absolute bottom-20 w-full text-center">
         <h1 className="text-white text-2xl md:text-5xl lg:text-4xl font-bold mb-10">MUSICIANS INC. MUSIC & ENTERTAINMENT AGENCY LONDON</h1>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded">View Gallery</button>
+        <button className="bg-[#633863] text-white px-4 py-2 rounded">View Gallery</button>
       </div>
     </div>
   );
