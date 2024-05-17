@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 
@@ -15,16 +16,16 @@ const Header = () => {
   return (
     <header className="bg-white shadow-md sticky">
       <div className="container mx-auto flex items-center justify-between p-4">
-        <div className="text-2xl font-bold"><img src='src/images/logo.png.webp' alt='logo'/></div>
+        <div className="text-2xl font-bold"><img src='../images/logo.png.webp' alt='logo' height={50} width={50}/></div>
         <nav className="relative flex-1">
           <ul className="flex justify-center space-x-8">
-            <li><a href="#" className="hover:text-[#633863]">Home</a></li>
+            <li><Link to="#" className="hover:text-[#633863]">Home</Link></li>
             <li 
               className="relative group"
               onMouseEnter={handleSubMenuToggle}
               onMouseLeave={handleSubMenuClose}
             >
-              <a href="#" className="hover:text-[#633863]">Bands & Entertainment</a>
+              <Link to="#" className="hover:text-[#633863]">Bands & Entertainment</Link>
               <div 
                 className={`fixed left-0 right-0 top-16 bg-white shadow-md ${isSubMenuOpen ? 'block' : 'hidden'}`}
               >
@@ -34,24 +35,24 @@ const Header = () => {
                       {/* Heading for Bands */}
                       <div className="col-span-2 font-semibold text-lg mb-4 text-left">Bands</div>
                       {/* Submenu Items for Bands */}
-                      <div>Submenu 1 Item 1</div>
-                      <div>Submenu 1 Item 2</div>
-                      <div>Submenu 1 Item 3</div>
+                      <div><Link to='#'>Submenu 1 Item 1</Link></div>
+                      <div><Link to='#'>Submenu 1 Item 2</Link></div>
+                      <div><Link to='#'>Submenu 1 Item 3</Link></div>
                     </div>
                     <div className="grid grid-cols-2 gap-x-12 text-center">
                       {/* Heading for Entertainment */}
                       <div className="col-span-2 font-semibold text-lg mb-4 text-left">Entertainment</div>
                       {/* Submenu Items for Entertainment */}
-                      <div>Submenu 2 Item 1</div>
-                      <div>Submenu 2 Item 2</div>
-                      <div>Submenu 2 Item 3</div>
+                      <div><Link to='#'>Submenu 2 Item 1</Link></div>
+                      <div><Link to='#'>Submenu 2 Item 2</Link></div>
+                      <div><Link to='#'>Submenu 2 Item 3</Link></div>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
-            <li><a href="#" className="hover:text-[#633863]">About</a></li>
-            <li><a href="#" className="hover:text-[#633863]">Contact Us</a></li>
+            <li><Link to="#" className="hover:text-[#633863]">About</Link></li>
+            <li><Link to="#" className="hover:text-[#633863]">Contact Us</Link></li>
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
